@@ -1,0 +1,12 @@
+ <h1>Dog#new</h1>
+<%= form_with model: @dog, local: true do |f| %>
+<%= f.label :name%>
+<%= f.text_area :name%>
+<%= f.label :age%>
+<%= f.number_field :age%>
+<%= f.label :frecuencia_de_paseos %>
+<%= f.number_field :frequencie_walk %>
+<%= f.label :tiempo_de_paseo_en_minutos %>
+<%= f.number_field :walking_time%>
+<%= f.submit 'Enviar' %>
+<%end%>

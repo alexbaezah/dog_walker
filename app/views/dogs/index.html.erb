@@ -1,0 +1,28 @@
+hola 
+<table>
+<tr>
+
+ <thead>
+    <th> nombre </th> 
+    <th> edad </th>
+    <th> frecuencia de paseos </th>
+    <th> tiempo de paseo </th>
+  </tr> 
+  <% @dogs.each do |dog| %>
+  <tr> 
+
+  <td> <%= dog.name %> </td>
+  <td> <%= dog.age %> </td>
+  <td> <%= dog.frequencie_walk %> </td>
+  <td> <%= dog.walking_time %> </td>
+  <td>
+    <%= link_to "Mostrar" %>
+     <%= link_to "editar", dog_edit_path(dog) %>
+     <%= link_to "eliminar", dog_path(dog), method: :delete %>
+     </td>
+     </tr>
+     <% end %>
+     </table>
+
+
+
