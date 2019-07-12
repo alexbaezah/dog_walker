@@ -1,12 +1,16 @@
 class DogsController < ApplicationController
+    
     before_action :set_dog, only: [:show, :edit, :update, :destroy]
     before_action :authenticate_user!
+
     def index 
         @dogs = Dog.all 
     end
+
     def new 
         @dog = Dog.new
     end
+
     def create
         @dog = Dog.new(dog_params)
         @dog.user_id = current_user.id
@@ -29,12 +33,14 @@ class DogsController < ApplicationController
         end
     end
 end
+
     def delete
         @dog = Dog.find(params[:id])
         @dog.destroy
         redirect_to dogs_path
         end
     end
+
     def show 
         @dog = Dog.find params[:id]
     end

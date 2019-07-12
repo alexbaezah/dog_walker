@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
-  devise_for :users, controllers: {
-    sessions: 'users/sessions'
+  Rails.application.routes.draw do
+    devise_for :users, controllers: {
+      registrations: 'users/registrations'
+    }
+  devise_for :dog_walkings, controllers: {
+    registrations: 'dog_walkings/registrations'
     }
   #  resources :dogs
   get '/dogs', to: 'dogs#index'
@@ -12,5 +16,5 @@ Rails.application.routes.draw do
   delete 'dogs/:id', to: 'dogs#delete'
 
   root to: "dogs#index"
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  end  
 end
