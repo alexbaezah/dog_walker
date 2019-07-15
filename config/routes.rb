@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
+  get 'maps2/index'
+  get 'maps/index'
   get 'geocoder/finaddress'
   Rails.application.routes.draw do
+  get 'maps2/index'
+  get 'maps/index'
   get 'geocoder/finaddress'
     devise_for :users, controllers: {
       registrations: 'users/registrations'

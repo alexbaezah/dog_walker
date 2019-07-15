@@ -1,0 +1,24 @@
+<h1> mapa para ver dueños </h1>
+
+
+<div style='width: 800px;'>
+  <div id="map" style='width: 800px; height: 400px;'></div>
+</div>
+
+<script> 
+handler = Gmaps.build('Google');
+handler.buildMap({
+        provider: {
+        center: new google.maps.LatLng({lat: -34, lng: -33}),
+        zoom: 4
+      },
+      internal: {
+        id: 'map'
+      }
+    },
+ function(){
+    markers = handler.addMarkers(<%=raw @hash.to_json %>);
+  }
+);
+
+</script>
