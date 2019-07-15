@@ -5,4 +5,7 @@ class User < ApplicationRecord
   has_one :dog_walking
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+
+  geocoded_by :address
+  after_validation :geocode
 end

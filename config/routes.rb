@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
+  get 'geocoder/finaddress'
   Rails.application.routes.draw do
+  get 'geocoder/finaddress'
     devise_for :users, controllers: {
       registrations: 'users/registrations'
-    }
+     }
   devise_for :dog_walkings, controllers: {
     registrations: 'dog_walkings/registrations'
     }
