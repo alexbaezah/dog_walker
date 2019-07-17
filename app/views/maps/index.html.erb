@@ -1,4 +1,4 @@
-<h1> mapa para ver dueños </h1>
+<h1> mapa para ver paseadores</h1>
 
 
 <div style='width: 800px;'>
@@ -9,15 +9,16 @@
 handler = Gmaps.build('Google');
 handler.buildMap({
         provider: {
-        center: new google.maps.LatLng({lat: -34, lng: -33}),
-        zoom: 4
+        center: new google.maps.LatLng({lat: <%= current_user.latitude %> , lng: <%= current_user.longitude %> }),
+        zoom: 10
       },
       internal: {
         id: 'map'
       }
     },
  function(){
-    markers = handler.addMarkers(<%=raw @hash.to_json %>);
+    markers = handler.addMarkers(<%=raw @hash2.to_json %>);
+    
   }
 );
 

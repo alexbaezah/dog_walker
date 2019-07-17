@@ -7,33 +7,28 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-addresses = "289 Constitution
-Court
-Liverpool, NY 13090
-8248 Buttonwood Drive
-Herndon, VA 20170
-953 Lake View Lane
-Greensburg, PA 15601
-8489 Smith Store Street
-Wake Forest, NC 27587
-60 Pumpkin Hill Dr.
-South Ozone Park, NY 11420
-923 Wakehurst Lane
-New Orleans, LA 70115
-995 Lakewood Court
-Upland, CA 91784
+addresses = "Sta Amalia 11-61, La Florida, Region Metropolitana,
+José Miguel Carrera 3-119, La Florida, Region Metropolitana,
+San José de la Estrella 60-10, La Florida, Region Metropolitana,
+José Miguel Carrera 398-350, La Florida, Region Metropolitana,
+Enrique Olivares 557-597, La Florida, Region Metropolitana,
+Colombia 8993, La Florida, Region Metropolitana
 "
 
-User.destroy_all
-
 addresses = addresses.split("\n")
+
+
+User.destroy_all
 addresses.each do |address|
-    User.create!(name: Faker::Name.name, email: Faker::Internet.email, password: '123456', age: 19/05/1995, address:address)
+    User.create!(name: Faker::Name.name, email: Faker::Internet.email, password: '123456', address:address)
     sleep 1
 end
+
+
+
     
 
-DogWalking.destroy_all
+ DogWalking.destroy_all
 addresses.each do |address|
     DogWalking.create!(name: Faker::Name.name, email: Faker::Internet.email, password: '123456', address:address)
     sleep 1

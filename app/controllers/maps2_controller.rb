@@ -1,10 +1,14 @@
 class Maps2Controller < ApplicationController
   def index
-    @dog_walkings = DogWalking.all
-    @hash = Gmaps4rails.build_markers(@dog_walkings) do |store, marker|
-      marker.lat store.latitude
-      marker.lng store.longitude
+    @users = User.near(
+      current_dog_walking.address,
+      100,
+      units: :km
+     )
+    @hash = Gmaps4rails.build_markers(@users) do |owner, marker|
+      marker.lat owner.latitude
+      marker.lng owner.longitude
     end
-   
+    
   end
 end
