@@ -8,6 +8,7 @@ class Maps2Controller < ApplicationController
     @hash = Gmaps4rails.build_markers(@users) do |owner, marker|
       marker.lat owner.latitude
       marker.lng owner.longitude
+      marker.infowindow owner.name
     end
     
   end

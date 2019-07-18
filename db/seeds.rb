@@ -15,6 +15,12 @@ Enrique Olivares 557-597, La Florida, Region Metropolitana,
 Colombia 8993, La Florida, Region Metropolitana
 "
 
+# addresses = "Av Libertador Bernardo O'Higgins, Santiago, Región Metropolitana,
+# Cerro Sta. Lucia, Santiago, Región Metropolitana,
+# Curicó 200-58, Santiago, Región Metropolitana,
+# Sta Isabel 176, Santiago, Región Metropolitana,
+# Barrio Italia, Ñuñoa, Región Metropolitana"
+
 addresses = addresses.split("\n")
 
 

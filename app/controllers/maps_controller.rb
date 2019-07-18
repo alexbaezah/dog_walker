@@ -8,6 +8,7 @@ class MapsController < ApplicationController
     @hash2 = Gmaps4rails.build_markers(@dog_walkings) do |dogw, marker2|
       marker2.lat dogw.latitude
       marker2.lng dogw.longitude
+      marker2.infowindow dogw.name
     end
    
   end
