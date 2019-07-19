@@ -1,7 +1,3 @@
-Rails.application.routes.draw do
-  get 'maps2/index'
-  get 'maps/index'
-  get 'geocoder/finaddress'
   Rails.application.routes.draw do
   get 'maps2/index'
   get 'maps/index'
@@ -22,5 +18,4 @@ Rails.application.routes.draw do
   delete 'dogs/:id', to: 'dogs#delete'
 
   root to: "dogs#index"
-  end  
-end
+  end
