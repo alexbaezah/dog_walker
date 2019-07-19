@@ -38,7 +38,11 @@
       <% if user_signed_in? %>
         <a class="nav-link" href="<%= dogs_new_path%>">Agregar perrito <span class="sr-only">(current)</span></a>
         <% else %>
-        <% end %>  
+        <% end %>
+         <% if dog_walking_signed_in? %>
+          <a class="nav-link" href="<%= maps2_index_path%>">Buscar dueños <span class="sr-only">(current)</span></a>
+        <% else %>
+        <% end %>    
       </li>
       
       <li class="nav-item">
@@ -70,6 +74,7 @@
           <a class="dropdown-item" href="<%= new_dog_walking_session_path %>">Ingreso como paseador</a>
          <a class="dropdown-item" href="<%= new_dog_walking_registration_path %>">Registro como paseador</a>   
         <% end %>
+       
               
         </div>
       </li>
