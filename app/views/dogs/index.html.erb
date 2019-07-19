@@ -1,28 +1,35 @@
-hola 
+
 <table>
-<tr>
+<tr class="table-secondary">
 
- <thead>
-    <th> nombre </th> 
-    <th> edad </th>
-    <th> frecuencia de paseos </th>
-    <th> tiempo de paseo </th>
-  </tr> 
+  <th scope="row">Nombre</th>
+  <th scope="row">Edad</th>
+  <th scope="row">Frecuencia de paseos</th>
+  <th scope="row">Tiempo de paseo</th> 
+    
+</tr> 
   <% @dogs.each do |dog| %>
-  <tr> 
-
-  <td> <%= dog.name %> </td>
-  <td> <%= dog.age %> </td>
-  <td> <%= dog.frequencie_walk %> </td>
-  <td> <%= dog.walking_time %> </td>
-  <td>
-    <%= link_to "Mostrar" %>
-     <%= link_to "editar", dog_edit_path(dog) %>
-     <%= link_to "eliminar", dog_path(dog), method: :delete %>
+  
+<tr>  
+  <div class="col-md-6">
+     <td scope="row"><%= dog.name %></td>
+     <td scope="row"><%= dog.age %></td>
+     <td scope="row"><%= dog.frequencie_walk %></td>
+     <td scope="row"><%= dog.walking_time %></td>
+      <td>
+        <%= link_to "Mostrar" %>
+        <%= link_to "editar", dog_edit_path(dog) %>
+        <%= link_to "eliminar", dog_path(dog), method: :delete %>
      </td>
-     </tr>
+    </div> 
+</tr>
      <% end %>
      </table>
+<br>
+<a class="link_to" href="<%= maps_index_path %>"> Busca paseadores cercanos <span class="sr-only">(current)</span></a>
+
+
+
 
 
 

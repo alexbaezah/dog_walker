@@ -1,12 +1,37 @@
- <h1>Dog#new</h1>
-<%= form_with model: @dog, local: true do |f| %>
-<%= f.label :name%>
-<%= f.text_area :name%>
-<%= f.label :age%>
-<%= f.number_field :age%>
-<%= f.label :frecuencia_de_paseos %>
-<%= f.number_field :frequencie_walk %>
-<%= f.label :tiempo_de_paseo_en_minutos %>
-<%= f.number_field :walking_time%>
-<%= f.submit 'Enviar' %>
-<%end%>
+<div class="field, col-md-4, text-center">
+<h2>Agrega a tu perrito</h2>
+</div>
+
+ <%= form_with model:@dog, local: true do |f| %>
+ <div class="form-group, col-md-6">
+     <%= f.label :nombre %>
+     <div class="form-group, col-md-6">
+         <%= f.text_field :name %>
+       </div>  
+  </div>
+  <br>
+  <div class="form-group, col-md-6">
+     <%= f.label :edad %>
+     <div class="form-group, col-md-6">
+         <%= f.number_field :age %>
+      </div>       
+  </div>
+  <br>
+
+  <div class="form-group, col-md-6">
+    <%= f.label :frecuencia_de_paseo %>
+        <div class="form-group, col-md-6">
+            <%= f.number_field :frequencie_walk %>
+       </div>     
+  </div>
+  <br>
+  <div class="form-group, col-md-6">
+        <%= f.label :tiempo_de_paseo_en_minutos %>
+     <div class="form-group, col-md-6">    
+            <%= f.number_field :walking_time %>
+     </div>   
+  </div>
+  <div class="form-group, col-md-12">  
+    <%= f.submit "agregar" %>
+  </div>  
+<% end %>
