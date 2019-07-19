@@ -3,6 +3,6 @@
 >tiene las  ramas de development y test1 para github
 >tiene puesto lo de geolocalización
 >Los marcadores de la geo se ve el nombre
-
+>agregado el bootstrap 
 
 
